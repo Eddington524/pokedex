@@ -15,6 +15,13 @@ export const getPokemonListData = async (
 	});
 	return response.data;
 };
+export const getPokemonSearchData = async (
+	signal: AbortSignal,
+	pokemonId: string
+) => {
+	const response = await axiosInstance.get(`/pokemon/${pokemonId}`);
+	return response.data;
+};
 
 export const getPokemonDetailData = async (pokemonName: string) => {
 	const response = await axiosInstance.get(`/pokemon/${pokemonName}`);

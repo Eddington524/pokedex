@@ -24,10 +24,14 @@ const DetailPokemon: React.FC = () => {
 		})
 		.join(',');
 
+	if (isLoading) {
+		return <p>loading...</p>;
+	}
+	const fixKgFormat = (results.weight * 0.1).toFixed(1);
 	return (
 		<div>
 			<p>name:{results.name}</p>
-			<p>weight:{results.weight * 0.1}kg</p>
+			<p>weight:{fixKgFormat}kg</p>
 			<p>height:{results.height * 10}cm</p>
 			<p>abilities:{getAbility}</p>
 			<p>types:{getPokeTypes}</p>

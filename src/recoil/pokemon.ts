@@ -84,3 +84,9 @@ export const pokemonDetailInfoState = atom<PokemonDetailInfo>({
 		},
 	},
 });
+
+export const pokemonSearchNumState = atom<string>({
+	key: 'pokemonSearchNumState',
+
+	default: '',
+});
