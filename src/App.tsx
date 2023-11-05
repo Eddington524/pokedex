@@ -1,11 +1,7 @@
-import PokemonList from './components/PokemonList';
+import AppRouter from './AppRouter';
 
 const App = () => {
-	return (
-		<>
-			<PokemonList />
-		</>
-	);
+	return <AppRouter />;
 };
 
 export default App;
