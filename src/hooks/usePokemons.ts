@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { getPokemonData } from '../api/index';
+import { getPokemonListData } from '../api/index';
+import { Error } from '../types';
 
 export type GetPokemonsResponse = {
 	count: number;
@@ -11,10 +12,6 @@ export type GetPokemonsResponse = {
 export type Pokemon = {
 	name: string;
 	url: string;
-};
-
-export type Error = {
-	message: string;
 };
 
 export const usePokemons = (pagination: number) => {
@@ -31,7 +28,7 @@ export const usePokemons = (pagination: number) => {
 		const controller = new AbortController();
 		const { signal } = controller;
 
-		getPokemonData(signal, pagination)
+		getPokemonListData(signal, pagination)
 			.then((data: GetPokemonsResponse) => {
 				setResults((prev) => [...prev, ...data.results]);
 				setIsLoading(false);
