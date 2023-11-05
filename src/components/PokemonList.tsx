@@ -9,7 +9,7 @@ const PokemonList: React.FC = () => {
 
 	const intObserver = useRef<IntersectionObserver | null>(null);
 	const lastCardRef = useCallback(
-		(node: HTMLDivElement | null) => {
+		(node: HTMLElement | null) => {
 			if (isLoading || !node) return;
 
 			if (intObserver.current) intObserver.current.disconnect();

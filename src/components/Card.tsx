@@ -1,11 +1,16 @@
 import React from 'react';
 import { Pokemon } from '../hooks/usePokemons';
+import { useRecoilState } from 'recoil';
+import { IPokeInfo, pokemonInfoState } from '../recoil/pokemon';
+import { Link } from 'react-router-dom';
 
 interface CardProps {
 	pokemon: Pokemon;
 }
 
 const Card = React.forwardRef<HTMLDivElement, CardProps>(({ pokemon }, ref) => {
+	const [info, setInfo] = useRecoilState<IPokeInfo>(pokemonInfoState);
+
 	const cardContent = (
 		<>
 			<h2>{pokemon.name}</h2>
@@ -13,11 +18,11 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(({ pokemon }, ref) => {
 	);
 
 	const content = ref ? (
-		<article ref={ref}>{cardContent}</article>
+		<div ref={ref}>{cardContent}</div>
 	) : (
-		<article>{cardContent}</article>
+		<div>{cardContent}</div>
 	);
-	return content;
+	return <Link to={`/${pokemon.name}`}>{content}</Link>;
 });
 
 export default Card;
