@@ -6,7 +6,6 @@ type TreeNodeProps = {
 };
 const TreeNode: React.FC<TreeNodeProps> = ({ name, evolvesTo }) => (
 	<div style={{ marginLeft: '20px' }}>
-		<div>{name}</div>
 		<div style={{ marginLeft: '20px' }}>
 			{evolvesTo.map((evolution, index) => (
 				<TreeNode
@@ -16,6 +15,7 @@ const TreeNode: React.FC<TreeNodeProps> = ({ name, evolvesTo }) => (
 				/>
 			))}
 		</div>
+		<div>{name}</div>
 	</div>
 );
 

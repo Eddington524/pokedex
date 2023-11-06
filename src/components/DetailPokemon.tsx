@@ -35,7 +35,10 @@ const DetailPokemon: React.FC = () => {
 			<p>height:{results.height * 10}cm</p>
 			<p>abilities:{getAbility}</p>
 			<p>types:{getPokeTypes}</p>
-			<EvolutionTree chain={results.evolutionChain} />
+			<div>
+				<span>evolutionchain</span>
+				<EvolutionTree chain={results.evolutionChain} />
+			</div>
 		</div>
 	);
 };
