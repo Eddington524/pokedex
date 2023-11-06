@@ -1,4 +1,4 @@
-# Project `Pokedex 포켓몬도감` 👩🏻‍💻💼📇
+# Project `Pokedex 포켓몬도감` 📚📖
 
 ## 🖥 Project Summary
 
@@ -20,7 +20,7 @@
 ## 🔧 Skills
 
 - ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-- ![TS](https://img.shields.io/badge/Typescript-F7DF1E?style=for-the-badge&logo=typescript&logoColor=blue)
+- ![TS](https://img.shields.io/badge/Typescript-white?style=for-the-badge&logo=typescript&logoColor=blue)
 - ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 
 ## 🔧 Tools
