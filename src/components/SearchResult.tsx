@@ -16,7 +16,7 @@ const SearchResult = () => {
 			{results ? (
 				<Card key={results?.name} pokemon={results} />
 			) : (
-				'검색 결과 없음'
+				<p>'검색 결과 없음'</p>
 			)}
 		</>
 	);
