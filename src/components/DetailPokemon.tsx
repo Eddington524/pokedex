@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { usePokeDetail } from '../hooks/usePokeDetail';
 import EvolutionTree from './EvolutionTree';
@@ -25,6 +25,7 @@ const DetailPokemon: React.FC = () => {
 		return <p>loading...</p>;
 	}
 	const fixKgFormat = (results.weight * 0.1).toFixed(1);
+
 	return (
 		<div>
 			<p>name:{results.name}</p>
