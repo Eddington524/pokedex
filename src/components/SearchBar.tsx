@@ -6,7 +6,7 @@ const SearchBar = () => {
 		pokemonSearchNumState
 	);
 
-	const handleSearch = () => {
+	const resetSearch = () => {
 		if (pokemonSearchNum) {
 			setPokemonSearchNum('');
 		}
@@ -20,7 +20,7 @@ const SearchBar = () => {
 				value={pokemonSearchNum}
 				onChange={(e) => setPokemonSearchNum(e.target.value)}
 			></input>
-			<button onClick={handleSearch}>reset</button>
+			<button onClick={resetSearch}>reset</button>
 		</div>
 	);
 };
