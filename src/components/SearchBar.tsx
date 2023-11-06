@@ -1,5 +1,3 @@
-import React from 'react';
-import styles from '../styles/SearchBar.module.css';
 import { useRecoilState } from 'recoil';
 import { pokemonSearchNumState } from '../recoil/pokemon';
 
@@ -15,7 +13,7 @@ const SearchBar = () => {
 	};
 
 	return (
-		<div className={styles.container}>
+		<div>
 			<h4>search</h4>
 			<input
 				type="number"
