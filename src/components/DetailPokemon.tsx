@@ -1,9 +1,6 @@
 import React, { useEffect } from 'react';
-import { useRecoilState, useRecoilValue } from 'recoil';
-import { Chain, IPokeInfo, pokemonInfoState } from '../recoil/pokemon';
-import { getPokemonDetailData } from '../api';
 import { useLocation } from 'react-router-dom';
-import { PokemonDetailInfo, usePokeDetail } from '../hooks/usePokeDetail';
+import { usePokeDetail } from '../hooks/usePokeDetail';
 import EvolutionTree from './EvolutionTree';
 
 const DetailPokemon: React.FC = () => {

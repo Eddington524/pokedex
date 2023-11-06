@@ -39,12 +39,6 @@ type Species = {
 	url: string;
 };
 
-export const inputState = atom<string>({
-	key: 'inputState',
-
-	default: '',
-});
-
 export const pokemonInfoState = atom<IPokeInfo>({
 	key: 'pokemon',
 

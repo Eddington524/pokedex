@@ -38,7 +38,6 @@ export const usePokeDetail = (name: string) => {
 	const [results, setResults] = useRecoilState<PokemonDetailInfo>(
 		pokemonDetailInfoState
 	);
-	// const [evolutionResults, setEvolutionResults] = useRecoilState<Pokem>();
 	const [isLoading, setIsLoading] = useState(true);
 	const [isError, setIsError] = useState(false);
 	const [error, setError] = useState<Error>({ message: '' });

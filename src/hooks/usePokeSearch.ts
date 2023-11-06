@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { getPokemonListData, getPokemonSearchData } from '../api/index';
+import { getPokemonSearchData } from '../api/index';
 import { Error } from '../types';
 import { useRecoilValue } from 'recoil';
 import { pokemonSearchNumState } from '../recoil/pokemon';
